@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace GreenThumb2._0.Models
 {
-    internal class InstructionsModel
+    internal class InstructionModel
     {
-        public int Id { get; set; }
+        public int InstructionsId { get; set; }
         public string Instructions { get; set; } = null!;
+        public int PlantId { get; set; }
+        public PlantModel Plant { get; set; }
     }
 }

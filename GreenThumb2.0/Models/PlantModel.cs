@@ -8,9 +8,8 @@ namespace GreenThumb2._0.Models
 {
     internal class PlantModel
     {
-        public int Id { get; set; }
+        public int PlantId { get; set; }
         public string Name { get; set; } = null!; 
-        public DateTime PlantDate { get; set; }
-        IEnumerable<InstructorModel> Instructions { get; set; }
+        IEnumerable<InstructionModel> Instructions { get; set; }
     }
 }
