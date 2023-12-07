@@ -7,6 +7,39 @@
         mc:Ignorable="d"
         Title="AddPlantWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Name="txtName" Grid.Row="1"
+                Grid.Column="2"/>
+        <TextBox Name="txtInstructions" Grid.Row="2"
+         Grid.Column="2"/>
+        <Button Content="Save Plant" Name="btnSavePlant" Grid.Column="3" Grid.Row="4" Click="btnSavePlant_Click"/>
+        <Label Content ="Plant Name: " Grid.Row="1" Grid.Column="1"/>
+        <Label Content ="Plant Instruction: " Grid.Row="2" Grid.Column="1"/>
+        <Button Content="Add Instruction" Name="btnInstruction" Grid.Column="3" Grid.Row="2" Click="btnInstruction_Click"/>
+        <ListView Name="lvInstructions" Grid.Row="4" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2" />
+        <Label Content="Instruction List" Grid.Row="3" Grid.Column="1"/>
+        <Button Content="Go Back" Grid.Row="6" Grid.Column="3" Click="Button_Click"/>
+
+
+
+
     </Grid>
 </Window>

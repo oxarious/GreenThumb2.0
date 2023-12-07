@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GreenThumb2._0.Models;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace GreenThumb2._0
 {
@@ -19,9 +9,29 @@ namespace GreenThumb2._0
     /// </summary>
     public partial class PlantDetailsWindow : Window
     {
-        public PlantDetailsWindow()
+        public PlantDetailsWindow(PlantModel plant)
         {
             InitializeComponent();
+            lbName.Content = plant.Name;
+
+            foreach (InstructionModel model in plant.Instructions)
+            {
+                ListViewItem listViewItem = new ListViewItem();
+                listViewItem.Tag = model;
+                listViewItem.Content = model.Instructions;
+                lvInstructions.Items.Add(listViewItem);
+
+
+            }
+
+
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
         }
     }
 }

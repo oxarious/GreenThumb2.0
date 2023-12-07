@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace GreenThumb2._0.Models
 {
-    internal class PlantModel
+    public class PlantModel
     {
+        [Key]
         public int PlantId { get; set; }
-        public string Name { get; set; } = null!; 
-        IEnumerable<InstructionModel> Instructions { get; set; }
+        public string Name { get; set; } = null!;
+        public IEnumerable<InstructionModel>? Instructions { get; set; }
+
+
     }
 }

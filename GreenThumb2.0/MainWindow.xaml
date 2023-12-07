@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <ListView Name ="lvPlants" Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" />
+        <!--<ListView Name ="lvSearchedPlants" Grid.Row="3" Grid.Column="2" Grid.RowSpan="3" />-->
+        <Label Grid.Row="1" Grid.Column="1" Content="Plant Window"/>
+        <Button Name ="btnSearch" Content ="Search Plant" Grid.Row="2" Grid.Column="3" Click="btnSearch_Click"/>
+        <Button Name ="btnDetails" Content="Details" Grid.Row="5" Grid.Column="1" Click="btnDetails_Click"/>
+        <Button Name ="btnDelete" Content="Delete" Grid.Row="6" Grid.Column="1" Click="btnDelete_Click_1"/>
+        <TextBox Name="tbxSearch" Grid.Row="2" Grid.Column="2"/>
+        <Button Content="Clear Search" Name ="btnClearSearch" Grid.Row="5" Grid.Column="2" Click="btnClearSearch_Click"/>
+        <Button Name="btnAddPlantWindow" Content ="Add New Plant" Grid.Row="6" Grid.Column ="3" Click="btnAddPlantWindow_Click"/>
+
+
 
     </Grid>
 </Window>
